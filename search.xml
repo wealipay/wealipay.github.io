@@ -4,13 +4,150 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/8fa2bba2681a/"/>
-      <url>/8fa2bba2681a/</url>
+      <title>Vite配置请求代理</title>
+      <link href="/e3277938d549/"/>
+      <url>/e3277938d549/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="server-proxy"><a href="#server-proxy" class="headerlink" title="server.proxy"></a>server.proxy</h3><ul><li>为开发服务器配置自定义代理规则。期望接收一个 { key: options } 对象。任何请求路径以 key 值开头的请求将被代理到对应的目标。api是自行设置的前缀！<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> fileURLToPath<span class="token punctuation">,</span> <span class="token constant">URL</span> <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'node:url'</span><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> defineConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vite'</span><span class="token keyword">import</span> vue <span class="token keyword">from</span> <span class="token string">'@vitejs/plugin-vue'</span><span class="token keyword">import</span> vueJsx <span class="token keyword">from</span> <span class="token string">'@vitejs/plugin-vue-jsx'</span><span class="token comment">// https://vitejs.dev/config/</span><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>  plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vueJsx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  resolve<span class="token operator">:</span> <span class="token punctuation">&#123;</span>    alias<span class="token operator">:</span> <span class="token punctuation">&#123;</span>      <span class="token string-property property">'@'</span><span class="token operator">:</span> <span class="token function">fileURLToPath</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name"><span class="token constant">URL</span></span><span class="token punctuation">(</span><span class="token string">'./src'</span><span class="token punctuation">,</span> <span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token punctuation">&#125;</span>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>  server<span class="token operator">:</span><span class="token punctuation">&#123;</span>    port<span class="token operator">:</span><span class="token number">3000</span><span class="token punctuation">,</span>    proxy<span class="token operator">:</span><span class="token punctuation">&#123;</span>      <span class="token string-property property">'/api'</span><span class="token operator">:</span> <span class="token string">'http://localhost:8090'</span><span class="token punctuation">,</span>      <span class="token string-property property">'/imgs'</span><span class="token operator">:</span> <span class="token string">'http://localhost:8090'</span>    <span class="token punctuation">&#125;</span>  <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> ele教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ele </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何配置路由</title>
+      <link href="/585e1f1ac8ca/"/>
+      <url>/585e1f1ac8ca/</url>
+      
+        <content type="html"><![CDATA[<h3 id="路由配置："><a href="#路由配置：" class="headerlink" title="路由配置："></a>路由配置：</h3><ol><li>内容组件渲染的地方(router-view)</li></ol><ul><li>App.vue  <pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang&#x3D;&#39;ts&#39;&gt;import &#123; RouterView &#125; from &quot;vue-router&quot;;&lt;&#x2F;script&gt;&lt;template&gt;  &lt;RouterView &#x2F;&gt;&lt;&#x2F;template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><ol start="2"><li>路由与组件的对应关系(router实例config)</li></ol><ul><li>router&#x2F;index.ts  <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createRouter<span class="token punctuation">,</span> createWebHistory <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span><span class="token keyword">import</span> TabsView <span class="token keyword">from</span> <span class="token string">"@/views/tabs/TabsView.vue"</span><span class="token punctuation">;</span><span class="token keyword">import</span> HomeView <span class="token keyword">from</span> <span class="token string">"@/views/tabs/home/HomeView.vue"</span><span class="token punctuation">;</span><span class="token keyword">import</span> OrderView <span class="token keyword">from</span> <span class="token string">"@/views/tabs/order/OrderView.vue"</span><span class="token punctuation">;</span><span class="token keyword">import</span> MeView <span class="token keyword">from</span> <span class="token string">"@/views/tabs/me/MeView.vue"</span><span class="token punctuation">;</span><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>  history<span class="token operator">:</span> <span class="token function">createWebHistory</span><span class="token punctuation">(</span><span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">BASE_URL</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  routes<span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token punctuation">&#123;</span>      path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>      redirect<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span>      meta<span class="token operator">:</span> <span class="token punctuation">&#123;</span>        title<span class="token operator">:</span> <span class="token string">'首页'</span>      <span class="token punctuation">&#125;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>    <span class="token punctuation">&#123;</span>      path<span class="token operator">:</span> <span class="token string">'/tabs'</span><span class="token punctuation">,</span>      name<span class="token operator">:</span> <span class="token string">'tabs'</span><span class="token punctuation">,</span>      component<span class="token operator">:</span> TabsView<span class="token punctuation">,</span>      children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>        path<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span>        component<span class="token operator">:</span> HomeView<span class="token punctuation">,</span>        name<span class="token operator">:</span> <span class="token string">'home'</span>      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>      <span class="token punctuation">&#123;</span>        path<span class="token operator">:</span> <span class="token string">'/order'</span><span class="token punctuation">,</span>        component<span class="token operator">:</span> OrderView<span class="token punctuation">,</span>        name<span class="token operator">:</span> <span class="token string">'order'</span>      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>      <span class="token punctuation">&#123;</span>        path<span class="token operator">:</span> <span class="token string">'/me'</span><span class="token punctuation">,</span>        component<span class="token operator">:</span> MeView<span class="token punctuation">,</span>        name<span class="token operator">:</span> <span class="token string">'me'</span>      <span class="token punctuation">&#125;</span><span class="token punctuation">]</span>    <span class="token punctuation">&#125;</span>  <span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token keyword">export</span> <span class="token keyword">default</span> router<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><ol start="3"><li><p>触发路由跳转的地方(如果需要的话，router-link或者动态路由设置)</p><ul><li>views&#x2F;TabsView.vue<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup lang&#x3D;&#39;ts&#39;&gt;import &#123; useRoute, useRouter,RouterView &#125; from &#39;vue-router&#39;import &#123; Tabbar, TabbarItem &#125; from &#39;vant&#39;import &#123; ref, watch &#125; from &#39;vue&#39;const route &#x3D; useRoute()const router &#x3D; useRouter()const active &#x3D; ref(route.name as string)watch(active, (nv) &#x3D;&gt; &#123;    router.push(&#123;        name:nv    &#125;)&#125;)&lt;&#x2F;script&gt;&lt;template&gt;&lt;RouterView &#x2F;&gt;  &lt;Tabbar v-model&#x3D;&quot;active&quot;&gt;    &lt;TabbarItem name&#x3D;&quot;home&quot; icon&#x3D;&quot;home-o&quot;&gt;home&lt;&#x2F;TabbarItem&gt;    &lt;TabbarItem name&#x3D;&quot;order&quot; icon&#x3D;&quot;bars&quot;&gt;order&lt;&#x2F;TabbarItem&gt;    &lt;TabbarItem name&#x3D;&quot;me&quot; icon&#x3D;&quot;contact&quot;&gt;me&lt;&#x2F;TabbarItem&gt;  &lt;&#x2F;Tabbar&gt;&lt;&#x2F;template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul></li><li><p>将路由的实例挂载到App上</p></li></ol><ul><li>main.ts  <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createApp <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createPinia <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span><span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span><span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./router'</span><span class="token keyword">import</span> <span class="token string">'vant/lib/index.css'</span><span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span>app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h3 id="Vant安装："><a href="#Vant安装：" class="headerlink" title="Vant安装："></a>Vant安装：</h3><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">npm install vant -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>main.ts  <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token string">"vant/lib/index.css"</span><span class="token punctuation">;</span><span class="token comment">//引入全局样式，在&lt;script setup lang="ts"> &lt;/script>中，只需要导入组件不需要注册就可直接使用，如上TabsView.vue</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul><h3 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h3><ul><li>watch就是当值第一次绑定的时候，是不会执行监听函数的，只有值诞生改变才会执行</li></ul><h3 id="createWebHistory"><a href="#createWebHistory" class="headerlink" title="createWebHistory"></a>createWebHistory</h3><ul><li>函数可以接受一个base字符串可选参数，该参数提供了一个基础路径。</li></ul><p>meta简单来说就是路由元信息 也就是每个路由身上携带的信息。</p><hr><a href="https://m.jb51.net/article/258141.htm">useRoute和useRouter</a>]]></content>
+      
+      
+      <categories>
+          
+          <category> ele教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ele </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前台项目初始化</title>
+      <link href="/c9778c1d1347/"/>
+      <url>/c9778c1d1347/</url>
+      
+        <content type="html"><![CDATA[<h3 id="项目安装："><a href="#项目安装：" class="headerlink" title="项目安装："></a>项目安装：</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm init vue<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>选择如下选项：<blockquote><p>typescript<br>pinia<br>vue router<br>jsx<br>Eslint<br>prettier</p></blockquote></li></ul><h3 id="运行："><a href="#运行：" class="headerlink" title="运行："></a>运行：</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm run dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> ele教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ele </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>后台项目初始化</title>
+      <link href="/7321f32d7521/"/>
+      <url>/7321f32d7521/</url>
+      
+        <content type="html"><![CDATA[<h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><ul><li>1.安装<pre class="line-numbers language-node" data-language="node"><code class="language-node">&#x2F;&#x2F;创建一个文件夹npm initnpm install json-server -S<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li>2.引入</li><li>3.创建实例<br> *使用中间件（静态资源的配置，数据的解析,路由）</li><li>4.监听端口<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//app.ts</span><span class="token keyword">const</span> jsonServer<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'json-server'</span><span class="token punctuation">)</span><span class="token keyword">const</span> path<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token keyword">const</span> router<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'./router'</span><span class="token punctuation">)</span><span class="token keyword">const</span> db<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'./db'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">const</span> server<span class="token operator">=</span>jsonServer<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">const</span> middlewares<span class="token operator">=</span>jsonServer<span class="token punctuation">.</span><span class="token function">defaults</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>    <span class="token keyword">static</span><span class="token operator">:</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>jsonServer<span class="token punctuation">.</span>bodyParser<span class="token punctuation">)</span><span class="token function">router</span><span class="token punctuation">(</span>server<span class="token punctuation">)</span><span class="token keyword">const</span> jsonRouter<span class="token operator">=</span>jsonServer<span class="token punctuation">.</span><span class="token function">router</span><span class="token punctuation">(</span>db<span class="token punctuation">)</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span>jsonRouter<span class="token punctuation">)</span>server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8090</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">&#123;</span>    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'server is running'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>路由：是一个特殊的中间件，用来处理特定的url请求，对应的是处理的请求函数</li><li>中间件：用来处理所有的请求，鉴权，静态资源，请求体的解析</li></ul><h3 id="自动更新"><a href="#自动更新" class="headerlink" title="自动更新"></a>自动更新</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm install nodemon -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">//package.json</span>    <span class="token property">"server"</span><span class="token operator">:</span> <span class="token string">"nodemon --delay 1000ms ./src/app.js"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="res-json-bind"><a href="#res-json-bind" class="headerlink" title="res.json.bind()"></a>res.json.bind()</h3><ul><li>如何将res.json作为回调函数传递？<blockquote><p>您必须使用res.json.bind(res)。<br>当您致电res.json()时，它会在res对象上执行（即this值在执行此功能时引用res。但是，当您将res.json作为回调参数传递，然后将其作为callback()调用时，会在调用this的上下文中的callback()对象上执行该操作</p></blockquote></li></ul><p>使用bind()方法强制在res上调用该函数。无论何时调用绑定函数，其this值始终为res</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ele教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ele </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>axios使用</title>
+      <link href="/a4a541817fdd/"/>
+      <url>/a4a541817fdd/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm install axios -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> ele教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ele </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo学习笔记</title>
+      <link href="/70df37b92254/"/>
+      <url>/70df37b92254/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>新建一个文件夹hexo，通过hexo init初始化项目</li></ul><h3 id="hexo-theme-matery"><a href="#hexo-theme-matery" class="headerlink" title="hexo-theme-matery"></a>hexo-theme-matery</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">&#x2F;&#x2F;进入到theme文件夹下git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><blockquote><p>在_config.yml文件中使用下载的主题</p></blockquote><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">theme: hexo-theme-matery<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="代码美化配置："><a href="#代码美化配置：" class="headerlink" title="代码美化配置："></a>代码美化配置：</h3><ul><li>在配置文件_config.yml文件中设置prismjs里面的enable:true</li></ul><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">highlight:  enable: false  line_number: true  auto_detect: false  tab_replace: ''  wrap: true  hljs: false        prismjs:  enable: true  preprocess: true  line_number: true  tab_replace: ''<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="链接地址："><a href="#链接地址：" class="headerlink" title="链接地址："></a>链接地址：</h3><ul><li>在_config.yml更改链接的地址为hash模式</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">permalink</span><span class="token operator">:</span> <span class="token operator">:</span>hash<span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="在线加密"><a href="#在线加密" class="headerlink" title="在线加密"></a>在线加密</h3><p><a href="https://tool.oschina.net/encrypt?type=2">在线加密–&gt;sh256</a></p><h3 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h3><ul><li>更改配置文件必须使用hexo clean清除缓存才能失效！</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
