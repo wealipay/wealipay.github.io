@@ -423,14 +423,14 @@ tree shaking
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    152
+                    695
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -494,7 +494,26 @@ tree shaking
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>propList: 当有些属性的单位我们不希望转换的时候，可以添加在数组后面，并在前面加上!号，如propList: [“*”,”!letter-spacing”],这表示：所有css属性的属性的单位都进行转化，除了letter-spacing的</li>
+<li>selectorBlackList：转换的黑名单，在黑名单里面的我们可以写入字符串，只要类名包含有这个字符串，就不会被匹配。比如selectorBlackList: [‘wrap’],它表示形如wrap,my-wrap,wrapper这样的类名的单位，都不会被转换</li>
 </ul>
+<p>首先你要明白一点，rem 是根据 body 的 fontSize 来确定显示时的文字大小</p>
+<p>最终显示的文字大小 &#x3D; rem值 * body fontSize 值 + ‘px’</p>
+<p>而 rem 值是由 css 中的 fontSize 值除以 postcss.config.js 中的 rootValue 计算得出，</p>
+<p>所以修改 main.ts 中的 rootWidth 不会引起 rem 值的变化</p>
+<p>（假设css中元素是39px，postconfig.config.js rootValue 是 16，则 rem 值始终是 39&#x2F;16&#x3D;2.4375）</p>
+<p>但是 body 的 fontSize 是由 js 根据 main.ts 中的 deviceWidth、rootValue、rootWidth 动态计算出来的，</p>
+<p>body fontSize &#x3D; (deviceWidth * rootValue) &#x2F; rootWidth + ‘px’</p>
+<p>你修改了 main.ts 中的 rootWidth 这就引起了 body 的 fontSize 变化，进而影响了最终显示的文字大小</p>
+<p>（rootWidth从390变为375是变小了，所以 body fontSize 变大，元素最终的字体就会变大</p>
+<p>按照课程之前是正好占满一行，你这样改了之后刷新是不是字体变大溢出变成两行了</p>
+<p><a target="_blank" rel="noopener" href="https://img.mukewang.com/szimg/64897b2009a7dc0622360302.jpg">https://img.mukewang.com/szimg/64897b2009a7dc0622360302.jpg</a></p>
+<p><a target="_blank" rel="noopener" href="https://img.mukewang.com/szimg/64897b5909efc67525420804.jpg">https://img.mukewang.com/szimg/64897b5909efc67525420804.jpg</a></p>
+<p>一般来说 UI 设计稿都是 750px 宽的</p>
+<p>所以一般设置 main.ts 中 rootValue 为 32，rootWidth 为 750，postcss.config.js 中 rootValue 为 32,</p>
+<p>这样会看着舒服一些（屏幕宽度计算后 body fontSize 不会小于 12px），否则调试页面看起来会比较难受</p>
+<p>然后再写代码的时候完全按照设计图上的像素值写就好了，设计图上是多少px，写的时候就写多少px</p>
+<p>如果设计图不是 750px 的，可以自己在 PS 软件里改一下，毕竟后期图片都是接口返回的地址，图标都是字体图标，不会影响清晰度</p>
 
                 
             </div>
@@ -639,18 +658,17 @@ tree shaking
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/9deac5268b33/">
+                <a href="/141e930d1890/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="配置Vite自动按需引入vant">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="第五章">
                         
-                        <span class="card-title">配置Vite自动按需引入vant</span>
+                        <span class="card-title">第五章</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -660,9 +678,9 @@ tree shaking
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -675,7 +693,6 @@ tree shaking
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -927,7 +944,7 @@ tree shaking
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.1k</span>
+                        class="white-color">3.1k</span>
             
             
             
