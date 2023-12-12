@@ -4,15 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="后台项目初始化, 网络笔记">
-    <meta name="description" content="项目初始化
-1.安装&amp;#x2F;&amp;#x2F;创建一个文件夹
-npm init
-npm install json-server -S
-2.引入
-3.创建实例 *使用中间件（静态资源的配置，数据的解析,路由）
-4.监听端口//app.ts
-co">
+    <meta name="keywords" content="薅羊毛实战, 网络笔记">
+    <meta name="description" content="Stick to it">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +17,7 @@ co">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>后台项目初始化 | 网络笔记</title>
+    <title>薅羊毛实战 | 网络笔记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -341,7 +334,7 @@ co">
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '0b883aa10f7af56fcb4f60d1a21539603a66898be31552cba4e623a5e3f73505';
+        let pwd = '8d988fa37098528770f03e9869cf40bb65ddb72865da230a7ad8c299cdc74171';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -354,12 +347,12 @@ co">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">后台项目初始化</h1>
+                    <h1 class="description center-align post-title">薅羊毛实战</h1>
                 </div>
             </div>
         </div>
@@ -383,8 +376,8 @@ co">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ele/">
-                                <span class="chip bg-color">ele</span>
+                            <a href="/tags/combat/">
+                                <span class="chip bg-color">combat</span>
                             </a>
                         
                     </div>
@@ -395,8 +388,8 @@ co">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/ele%E6%95%99%E7%A8%8B/" class="post-category">
-                                ele教程
+                            <a href="/categories/combat%E5%8E%86%E7%A8%8B/" class="post-category">
+                                combat历程
                             </a>
                         
                     </div>
@@ -408,28 +401,28 @@ co">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-06
+                    2023-11-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-06
+                    2023-12-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    316
+                    479
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -452,45 +445,141 @@ co">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><ul>
-<li>1.安装<pre class="line-numbers language-node" data-language="node"><code class="language-node">&#x2F;&#x2F;创建一个文件夹
-npm init
-npm install json-server -S<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-<li>2.引入</li>
-<li>3.创建实例<br> *使用中间件（静态资源的配置，数据的解析,路由）</li>
-<li>4.监听端口<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//app.ts</span>
-<span class="token keyword">const</span> jsonServer<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'json-server'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> path<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> router<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'./router'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> db<span class="token operator">=</span><span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'./db'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <h3 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h3><h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><ul>
+<li>在 *<strong>github</strong>上新建一个空的仓库(不用初始化README.md,只包含.git的文件夹)</li>
+<li>通过ssh的方式克隆出仓库文件，通过<pre class="line-numbers language-git" data-language="git"><code class="language-git">npm init vite<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+初始化项目，文件夹的名称输入仓库的名称combat<br>初始化完成后，通过<pre class="line-numbers language-git" data-language="git"><code class="language-git">npm install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+安装项目依赖</li>
+<li>通过如下代码把代码上传到github上<pre class="line-numbers language-git" data-language="git"><code class="language-git">git add .
+git commit -m <span class="token string">"项目初始化"</span>
+git push <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+检测是否已经上传到github上</li>
+</ul>
+<h4 id="vercel"><a href="#vercel" class="headerlink" title="vercel"></a>vercel</h4><ul>
+<li>在vercel上新建一个项目，导入github上的combat仓库</li>
+<li>在 <strong>Domains</strong> 上增加自定义的域名<strong>wealipay.top</strong>，选择<strong>No Redirect</strong>，检测是否成功</li>
+</ul>
+<h4 id="Pinia"><a href="#Pinia" class="headerlink" title="Pinia"></a>Pinia</h4><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm install pinia -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>新建如下文件<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//store/index.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createPinia <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"pinia"</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> server<span class="token operator">=</span>jsonServer<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> middlewares<span class="token operator">=</span>jsonServer<span class="token punctuation">.</span><span class="token function">defaults</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">static</span><span class="token operator">:</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./public'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> store<span class="token operator">=</span><span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> store<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//main.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createApp <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store'</span>
+<span class="token keyword">import</span> <span class="token string">'./utils/rem'</span>
+
+<span class="token keyword">const</span> app<span class="token operator">=</span><span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>store<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h4 id="rem-ts"><a href="#rem-ts" class="headerlink" title="rem.ts"></a>rem.ts</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//rem.ts</span>
+<span class="token keyword">const</span> baseSize <span class="token operator">=</span> <span class="token number">37.5</span>
+
+<span class="token keyword">function</span> <span class="token function">setRem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> scale <span class="token operator">=</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientWidth <span class="token operator">/</span> <span class="token number">750</span>
+    document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> baseSize <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>scale<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'px'</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">setRem</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onresize</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">setRem</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> baseSize<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="配置"><a href="#配置" class="headerlink" title="@配置"></a>@配置</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">npm install <span class="token decorator"><span class="token at operator">@</span><span class="token function">types</span></span><span class="token operator">/</span>node <span class="token operator">-</span><span class="token constant">D</span>
+
+
+  <span class="token comment">/*tsconfig.json*/</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token string-property property">"compilerOptions"</span><span class="token operator">:</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"baseUrl"</span><span class="token operator">:</span><span class="token string">"."</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"paths"</span><span class="token operator">:</span><span class="token punctuation">&#123;</span>
+      <span class="token string-property property">"@"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"./src"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string-property property">"@/*"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"./src/*"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+  <span class="token comment">/*vite.config.ts*/</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> defineConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vite'</span>
+<span class="token keyword">import</span> vue <span class="token keyword">from</span> <span class="token string">'@vitejs/plugin-vue'</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span>
+
+<span class="token comment">// https://vitejs.dev/config/</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  resolve<span class="token operator">:</span><span class="token punctuation">&#123;</span>
+    alias<span class="token operator">:</span><span class="token punctuation">&#123;</span>
+      <span class="token string-property property">"@"</span><span class="token operator">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./src'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>jsonServer<span class="token punctuation">.</span>bodyParser<span class="token punctuation">)</span>
-<span class="token function">router</span><span class="token punctuation">(</span>server<span class="token punctuation">)</span>
-<span class="token keyword">const</span> jsonRouter<span class="token operator">=</span>jsonServer<span class="token punctuation">.</span><span class="token function">router</span><span class="token punctuation">(</span>db<span class="token punctuation">)</span>
-server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span>jsonRouter<span class="token punctuation">)</span>
 
-server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8090</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">&#123;</span>
-    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'server is running'</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>路由：是一个特殊的中间件，用来处理特定的url请求，对应的是处理的请求函数</li>
-<li>中间件：用来处理所有的请求，鉴权，静态资源，请求体的解析</li>
-</ul>
-<h3 id="自动更新"><a href="#自动更新" class="headerlink" title="自动更新"></a>自动更新</h3><pre class="line-numbers language-node" data-language="node"><code class="language-node">npm install nodemon -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">//package.json</span>
-    <span class="token property">"server"</span><span class="token operator">:</span> <span class="token string">"nodemon --delay 1000ms ./src/app.js"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="res-json-bind"><a href="#res-json-bind" class="headerlink" title="res.json.bind()"></a>res.json.bind()</h3><ul>
-<li>如何将res.json作为回调函数传递？<blockquote>
-<p>您必须使用res.json.bind(res)。<br>当您致电res.json()时，它会在res对象上执行（即this值在执行此功能时引用res。但是，当您将res.json作为回调参数传递，然后将其作为callback()调用时，会在调用this的上下文中的callback()对象上执行该操作</p>
-</blockquote>
-</li>
-</ul>
-<p>使用bind()方法强制在res上调用该函数。无论何时调用绑定函数，其this值始终为res</p>
+  <span class="token comment">/*vite-env.d.ts*/</span>
+<span class="token comment">//vite-env.d.ts</span>
+<span class="token comment">/// &lt;reference types="vite/client" /></span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.vue"</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">&#123;</span> DefineComponent <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> component<span class="token operator">:</span> DefineComponent<span class="token operator">&lt;</span><span class="token keyword">typeof</span> DefineComponent<span class="token operator">></span><span class="token punctuation">;</span>
+    <span class="token keyword">export</span> <span class="token keyword">default</span> component<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h4 id="request-ts"><a href="#request-ts" class="headerlink" title="request.ts"></a>request.ts</h4><ul>
+<li>vant安装<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">cnpm install vant <span class="token operator">-</span><span class="token constant">S</span>
+<span class="token comment">//main.ts</span>
+<span class="token keyword">import</span> <span class="token string">'vant/lib/index.css'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>request.ts<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">cnpm install axios <span class="token operator">-</span><span class="token constant">S</span>
+  <span class="token comment">/*request.ts*/</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span>Toast<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vant'</span>
+<span class="token keyword">let</span> baseURL <span class="token operator">=</span> <span class="token string">'/api'</span>
+
+<span class="token keyword">const</span> service <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    baseURL<span class="token punctuation">,</span>
+    timeout<span class="token operator">:</span> <span class="token number">10000</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+    config <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">const</span> token <span class="token operator">=</span> window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            config<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+                <span class="token string-property property">'token'</span><span class="token operator">:</span> token
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> config
+    <span class="token punctuation">&#125;</span>
+    error <span class="token operator">=></span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+    response <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">const</span> res <span class="token operator">=</span> response<span class="token punctuation">.</span>data
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>status <span class="token operator">!==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>success <span class="token operator">||</span> <span class="token string">'Error'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">return</span> res<span class="token punctuation">.</span>result
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+                <span class="token function">Toast</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>success<span class="token punctuation">)</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    error <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> service<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h4 id="Footer-vue"><a href="#Footer-vue" class="headerlink" title="Footer.vue"></a>Footer.vue</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//components/Footer.vue</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -516,7 +605,7 @@ server<span class="token punctuation">.</span><span class="token function">liste
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/7321f32d7521/">http://example.com/7321f32d7521/</a>
+                    <a href="http://example.com/b7a20d6b0bf5/">http://example.com/b7a20d6b0bf5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,8 +643,8 @@ server<span class="token punctuation">.</span><span class="token function">liste
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ele/">
-                                    <span class="chip bg-color">ele</span>
+                                <a href="/tags/combat/">
+                                    <span class="chip bg-color">combat</span>
                                 </a>
                             
                         </div>
@@ -634,46 +723,48 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/c9778c1d1347/">
+                <a href="/b7a20d6b0bf5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前台项目初始化">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="薅羊毛实战">
                         
-                        <span class="card-title">前台项目初始化</span>
+                        <span class="card-title">薅羊毛实战</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Stick to it
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ele%E6%95%99%E7%A8%8B/" class="post-category">
-                                    ele教程
+                            <a href="/categories/combat%E5%8E%86%E7%A8%8B/" class="post-category">
+                                    combat历程
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ele/">
-                        <span class="chip bg-color">ele</span>
+                    <a href="/tags/combat/">
+                        <span class="chip bg-color">combat</span>
                     </a>
                     
                 </div>
@@ -687,24 +778,24 @@ server<span class="token punctuation">.</span><span class="token function">liste
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/a4a541817fdd/">
+                <a href="/9fa774a78095/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="axios使用">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="如何设计一个组件">
                         
-                        <span class="card-title">axios使用</span>
+                        <span class="card-title">如何设计一个组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            定义组件的属性和事件
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-03
                             </span>
                         <span class="publish-author">
                             
